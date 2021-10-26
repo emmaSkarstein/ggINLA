@@ -3,3 +3,4 @@
 export(INLA2long)
 export(PlotMarginals)
 export(ReturnMarginalDF)
+export(theme_INLA)

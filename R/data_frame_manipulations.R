@@ -36,7 +36,7 @@ INLA2long <- function(inla_res, type = "fixed"){
 ReturnMarginalDF <- function(inla_res){
   fixed_df <- INLA2long(inla_res, type = "fixed") %>% mutate(id = "fixed")
   hyper_df <- INLA2long(inla_res, type = "hyperpar") %>% mutate(id = "hyper")
-  all_marginals <- bind_rows(fixed_df, hyper_df, .id = "id") 
+  all_marginals <- bind_rows(fixed = fixed_df, hyper = hyper_df, .id = "id") 
   return(all_marginals)
 }
   
